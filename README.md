@@ -74,5 +74,5 @@ MongoDB -------- Redis Queue
             Python Worker Service
 
 
-=======👩‍💻 Auth =======
+=======👩‍ Author =======
     Vasundhara Nadar
