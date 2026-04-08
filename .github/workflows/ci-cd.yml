@@ -1,0 +1,34 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install & Lint Backend
+        run: |
+          cd backend
+          npm install
+          npx eslint src/ --ext .js || true
+
+      - name: Build Backend Docker Image
+        run: |
+          docker build -t ai-task-backend:latest ./backend
+
+      - name: Build Frontend Docker Image
+        run: |
+          docker build -t ai-task-frontend:latest ./frontend
+
+      - name: Build Worker Docker Image
+        run: |
+          docker build -t ai-task-worker:latest ./worker
