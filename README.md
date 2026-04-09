@@ -96,7 +96,7 @@ Create separate .env files for frontend, backend, and worker services.
 Environment
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=vourful
 REDIS_HOST=redis
 REDIS_PORT=6379
 
@@ -182,8 +182,8 @@ Kubernetes Pods
 Argo CD Dashboard
 
 🌐 Live Deployment
-Frontend URL: your-frontend-url
-Backend URL: your-backend-url
+Frontend URL: http://127.0.0.1:40555 (Minikube local)
+Backend URL: http://localhost:3000
 
 ==== 👩‍ Author ====
   Vasundara Nadar
