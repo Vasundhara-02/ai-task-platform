@@ -1,0 +1,26 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  readme-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Files
+        run: ls -R
+
+      - name: README Check
+        run: |
+          if [ -f README.md ]; then
+            echo "README exists"
+          else
+            echo "README missing"
+            exit 1
+          fi
