@@ -29,3 +29,6 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 app.listen(5000, () => console.log('✅ Server running on port 5000'));
+
+// Health check
+app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date() }));
