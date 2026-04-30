@@ -187,3 +187,6 @@ Backend URL: http://localhost:3000
 
 ==== 👩‍ Author ====
   Vasundara Nadar
+
+## Health Check
+Backend health check available at: http://localhost:5000/health
