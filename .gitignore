@@ -2,4 +2,7 @@ node_modules/
 .env
 worker/venv/
 *.log
-minikube-linux-arm64
+*.DS_Store
+.next/
+build/
+dist/
